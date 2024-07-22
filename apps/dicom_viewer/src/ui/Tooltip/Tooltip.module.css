@@ -1,0 +1,135 @@
+/* Default styles */
+.wrapper {
+  display: inline-block;
+  color: #18191b;
+}
+
+.tooltip {
+  display: flex;
+  z-index: 1000;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.14);
+  padding: 10px 15px;
+  background-color: var(--dark-gray2);
+  opacity: 0.98;
+}
+
+.body {
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--white);
+  white-space: pre;
+}
+
+.arrow,
+.arrow:before {
+  position: absolute;
+  background: var(--dark-gray2);
+  width: 15px;
+  height: 15px;
+}
+
+.arrow {
+  visibility: hidden;
+}
+
+.arrow::before {
+  visibility: visible;
+  content: '';
+  transform: rotate(45deg);
+}
+
+.tooltip[data-popper-placement^='top'] > .arrow {
+  bottom: -6px;
+  display: none;
+}
+
+.tooltip[data-popper-placement^='bottom'] > .arrow {
+  top: -6px;
+  display: none;
+}
+
+.tooltip[data-popper-placement^='left'] > .arrow {
+  right: -6px;
+  display: none;
+}
+
+.tooltip[data-popper-placement^='right'] > .arrow {
+  left: -6px;
+  display: none;
+}
+
+/* Media queries */
+
+/* < 768px */
+@media screen and (max-width: 767px) {
+  .tooltip {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .body {
+    font-size: 14px;
+  }
+}
+
+/* >= 768px and < 1024px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .tooltip {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .body {
+    font-size: 15px;
+  }
+
+  .demo__link {
+    display: block;
+  }
+
+  .tooltip[data-popper-placement^='top'] > .arrow {
+    bottom: -6px;
+    display: none;
+  }
+
+  .tooltip[data-popper-placement^='bottom'] > .arrow {
+    top: -6px;
+    display: none;
+  }
+
+  .tooltip[data-popper-placement^='left'] > .arrow {
+    right: -6px;
+    display: none;
+  }
+
+  .tooltip[data-popper-placement^='right'] > .arrow {
+    left: -6px;
+    display: none;
+  }
+}
+
+/* >= 1024px and < 3500px */
+@media screen and (min-width: 1024px) and (max-width: 3499px) {
+  .tooltip {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+
+  .body {
+    font-size: 16px;
+  }
+}
+
+/* >= 3500px */
+@media screen and (min-width: 3500px) {
+  .tooltip {
+    font-size: 20px;
+    padding: 15px 20px;
+  }
+
+  .body {
+    font-size: 18px;
+  }
+}

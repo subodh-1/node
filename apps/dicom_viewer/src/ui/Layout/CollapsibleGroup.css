@@ -1,0 +1,66 @@
+/* Container styles */
+.collapsible-container {
+  display: flex;
+  position: relative;
+  margin: 5px;
+  justify-content: center;
+}
+
+/* Collapse element styles */
+.collapsible-element {
+  position: static;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  min-width: 10%;
+  transition: height 0.3s;
+  display: none; /* Default is hidden */
+}
+
+.collapsible-element.horizontal {
+  position: static;
+}
+
+.collapsible-element.show {
+  display: block;
+}
+
+/* Button styles */
+.collapsible-button {
+  background: #343a40; /* Custom background color */
+  padding: 5px;
+  z-index: 1000;
+  margin-left: 5px;
+  border: none; /* Remove default border */
+  color: #ffffff; /* Custom text color */
+  border-radius: 50%; /* Default to circular */
+  cursor: pointer;
+}
+
+.collapsible-button.rounded {
+  border-radius: 15px; /* Rounded corners */
+}
+
+.collapsible-button:hover {
+  background: #495057; /* Hover background color */
+}
+
+.collapsible-button.active {
+  background: #833b2e;
+  border-radius: 50%; /* Light orange background color when clicked */
+}
+
+/* Card styles */
+.collapsible-card {
+  background: #3c4034; /* Custom background color */
+  border: none;
+  border-radius: 15px;
+}
+
+.collapsible-card-body {
+  border-radius: inherit;
+  background: #343a40; /* Match card background */
+  padding: 7px;
+  transition: background 0.3s;
+  color: #ffffff; /* Custom text color */
+}
